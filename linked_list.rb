@@ -2,6 +2,13 @@
 
 # Represents full list
 class LinkedList
+  attr_reader :head, :tail
+
+  def initializes
+    @head = Node.new
+    @tail = Node.new
+  end
+
   # adds a new node containing value to the end of list
   def append(value)
 
@@ -14,16 +21,6 @@ class LinkedList
 
   # returns the total number of nodes in the list
   def size
-
-  end
-
-  # returns the first node in the list
-  def head
-
-  end
-
-  # returns the last node in the list
-  def tail
 
   end
 
