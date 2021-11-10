@@ -4,7 +4,7 @@
 class LinkedList
   attr_reader :head, :tail
 
-  def initializes
+  def initialize
     @head = Node.new
     @tail = Node.new
   end
