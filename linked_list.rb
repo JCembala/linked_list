@@ -11,7 +11,13 @@ class LinkedList
 
   # adds a new node containing value to the end of list
   def append(value)
-
+    node = Node.new(value)
+    if @head.value.nil?
+      @head = node
+    else
+      @tail.next_node = node
+    end
+    @tail = node
   end
 
   # adds a new node containing value to the start of list
