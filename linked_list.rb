@@ -27,7 +27,15 @@ class LinkedList
 
   # returns the total number of nodes in the list
   def size
+    return 1 if @head == @tail
 
+    current_node = @head
+    counter = 1
+    until current_node == @tail do
+      counter += 1
+      current_node = current_node.next_node
+    end
+    counter
   end
 
   # returns the node at the given index
