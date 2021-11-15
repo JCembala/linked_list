@@ -57,6 +57,8 @@ class LinkedList
 
   # removes the last element from the list
   def pop
+    return nil if size.zero?
+
     old_tail = @tail
     @tail = at(size - 2)
     @tail.next_node = nil
