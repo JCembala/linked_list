@@ -70,7 +70,7 @@ class LinkedList
     return false if size.zero?
 
     current_node = @head
-    until current_node == @tail
+    until current_node.nil?
       return true if current_node.value == value
 
       current_node = current_node.next_node
