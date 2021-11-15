@@ -88,7 +88,7 @@ class LinkedList
   def to_s
     current_node = @head
     string = ''
-    until current_node.next_node.nil?
+    until current_node == @tail
       string += "( #{current_node.value} ) -> "
       current_node = current_node.next_node
     end
