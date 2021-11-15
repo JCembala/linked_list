@@ -64,7 +64,12 @@ class LinkedList
   # represent your LinkedList object as string, so you can print them out and preview
   # in the console. The format should be: ( value ) -> ( value ) -> ( value )
   def to_s
-
+    current_node = @head
+    until current_node.next_node.nil?
+      print "( #{current_node.value} ) -> "
+      current_node = current_node.next_node
+    end
+    print "( #{current_node.value} )"
   end
 
   # inserts a new node with the provided value at the given index
