@@ -34,7 +34,7 @@ class LinkedList
 
     current_node = @head
     counter = 1
-    until current_node == @tail do
+    until current_node == @tail
       counter += 1
       current_node = current_node.next_node
     end
@@ -62,7 +62,7 @@ class LinkedList
   end
 
   # represent your LinkedList object as string, so you can print them out and preview
-  # in the console. The format should be: ( value ) -> ( value ) -> ( value ) -> nil
+  # in the console. The format should be: ( value ) -> ( value ) -> ( value )
   def to_s
 
   end
