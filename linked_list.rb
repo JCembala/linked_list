@@ -23,7 +23,9 @@ class LinkedList
 
   # adds a new node containing value to the start of list
   def prepend(value)
-
+    node = Node.new(value)
+    node.next_node = @head unless head.value.nil?
+    @head = node
   end
 
   # returns the total number of nodes in the list
