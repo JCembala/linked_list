@@ -43,7 +43,15 @@ class LinkedList
 
   # returns the node at the given index
   def at(index)
+    return nil if size < index
 
+    current_index = 0
+    current_node = @head
+    until current_index == index
+      current_node = current_node.next_node
+      current_index += 1
+    end
+    current_node
   end
 
   # removes the last element from the list
