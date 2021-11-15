@@ -30,6 +30,7 @@ class LinkedList
 
   # returns the total number of nodes in the list
   def size
+    return 0 if @head.value.nil?
     return 1 if @head == @tail
 
     current_node = @head
