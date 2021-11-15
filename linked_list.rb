@@ -56,7 +56,10 @@ class LinkedList
 
   # removes the last element from the list
   def pop
-
+    old_tail = @tail
+    @tail = at(size - 2)
+    @tail.next_node = nil
+    old_tail
   end
 
   # returns true if the passed in value is in the list and otherwise returns false
