@@ -67,7 +67,15 @@ class LinkedList
 
   # returns true if the passed in value is in the list and otherwise returns false
   def contains?(value)
+    return false if size.zero?
 
+    current_node = @head
+    until current_node == @tail
+      return true if current_node.value == value
+
+      current_node = current_node.next_node
+    end
+    false
   end
 
   # returns the index of the node containing value, or nil if not found
