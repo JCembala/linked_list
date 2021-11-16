@@ -117,5 +117,16 @@ class LinkedList
   end
 
   # removes node at given index
-  def remove_at(index) end
+  def remove_at(index)
+    return if index.negative? || index > size
+    return pop if index == size - 1
+
+    if index.zero?
+      @head = @tail = Node.new
+    else
+      prev_node = at(index - 1)
+      next_node = at(index + 1)
+      prev_node.next_node = next_node
+    end
+  end
 end
