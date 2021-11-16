@@ -108,11 +108,14 @@ class LinkedList
 
   # inserts a new node with the provided value at the given index
   def insert_at(value, index)
+    return if index < 1 || index > size
 
+    new_node = Node.new(value)
+    old_node = at(index)
+    at(index - 1).next_node = new_node
+    new_node.next_node = old_node
   end
 
   # removes node at given index
-  def remove_at(index)
-
-  end
+  def remove_at(index) end
 end
